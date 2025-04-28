@@ -10,16 +10,6 @@ terraform {
 provider "azurerm" {
   features {}
 }
-
-terraform {
-  backend "azurerm" {
-    resource_group_name  = "Pipeline-RG1"
-    storage_account_name = "terraformfilesave1"
-    container_name       = "testtffiles"
-    key                  = "dev.terraform.tfstate"
-  }
-}
-
 module "Spoke1" {
   source                          = "./Spoke1"
   resource_group_name             = "Spoke1"
