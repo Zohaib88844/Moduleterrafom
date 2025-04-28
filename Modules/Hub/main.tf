@@ -118,11 +118,12 @@ resource "azurerm_virtual_network_gateway" "hub_vpn_gateway" {
   active_active       = false
   enable_bgp          = false
   sku                 = "Basic"
-  }
+
 
   ip_configuration {
     name                          = "vpngateway-ipconfig"
     public_ip_address_id          = azurerm_public_ip.vpn_pip.id
     subnet_id                     = azurerm_subnet.hub_gateway_subnet.id
     private_ip_address_allocation = "Dynamic"
+  }
   }
