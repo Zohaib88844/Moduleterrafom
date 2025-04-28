@@ -125,8 +125,3 @@ resource "azurerm_virtual_network_gateway" "hub_vpn_gateway" {
     subnet_id                     = azurerm_subnet.hub_gateway_subnet.id
     private_ip_address_allocation = "Dynamic"
   }
-}
-
-resource "git" "name" {
-  
-}
