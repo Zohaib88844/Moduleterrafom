@@ -118,6 +118,7 @@ resource "azurerm_virtual_network_gateway" "hub_vpn_gateway" {
   active_active       = false
   enable_bgp          = false
   sku                 = "Basic"
+  }
 
   ip_configuration {
     name                          = "vpngateway-ipconfig"
